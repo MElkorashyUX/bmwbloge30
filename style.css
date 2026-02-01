@@ -135,3 +135,33 @@ section p {
 section img {
   border-radius: 1em;
 }
+
+section#my-work {
+  background-color: var(--base-color);
+}
+
+.grid-container {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "img-1 img-2"
+    "img-3 img-4";
+  gap: 1em;
+}
+
+.grid-container img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5em;
+  transition: 200ms ease;
+}
+
+.grid-container img:hover {
+  scale: 1.05;
+}
