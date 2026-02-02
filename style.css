@@ -56,7 +56,8 @@ nav a {
 }
 
 nav a:hover {
-  font-weight: 900;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 header,
@@ -85,6 +86,14 @@ header img {
 
 .text-container {
   flex: 0 1 30em;
+  gap: 16px;
+}
+
+.text-container h1 {
+  margin-bottom: 1em;
+}
+.text-container p {
+  margin-bottom: 2em;
 }
 
 h1 {
@@ -164,4 +173,81 @@ section#my-work {
 
 .grid-container img:hover {
   scale: 1.05;
+}
+
+details {
+  margin-top: 1em;
+  background-color: var(--background-color);
+  border-radius: 1em;
+}
+
+details summary {
+  padding: 1em;
+  font-size: 1.4rem;
+}
+
+.FAQ {
+  text-align: center;
+}
+details p {
+  padding: 0 2em 2em 2em;
+}
+
+footer {
+  padding-bottom: 1.5em;
+  text-align: center;
+}
+
+footer a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+footer a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+@media (max-width: 988px) {
+  header {
+    text-align: center;
+  }
+  header .text-container {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  nav li {
+    display: none;
+  }
+  nav li:first-child,
+  nav li:last-child {
+    display: block;
+  }
+
+  header {
+    margin-top: 0;
+  }
+  .cta-button {
+    margin-top: 0.5em;
+    width: 100%;
+  }
+  .secondary-button {
+    margin-top: 0.5em;
+    width: 100%;
+  }
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-container p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
 }
